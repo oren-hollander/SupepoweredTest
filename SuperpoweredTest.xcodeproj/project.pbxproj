@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		342DC56D7080778E4666D495 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 342DC9A90D66BA06B6CD3D99 /* main.cpp */; };
+		342DCBA3A73006425152B6B8 /* libSuperpoweredAudioOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 342DCAE8CAA8DFCFB827ACB7 /* libSuperpoweredAudioOSX.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,7 +24,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		342DC1C100655689B434EBE7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = file.gitignore; path = .gitignore; sourceTree = "<group>"; };
 		342DC9A90D66BA06B6CD3D99 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		342DCAE8CAA8DFCFB827ACB7 /* libSuperpoweredAudioOSX.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSuperpoweredAudioOSX.a; path = Superpowered/libSuperpoweredAudioOSX.a; sourceTree = "<group>"; };
 		342DCD5A2FC30F491CDF2E80 /* SuperpoweredTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SuperpoweredTest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -32,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				342DCBA3A73006425152B6B8 /* libSuperpoweredAudioOSX.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +46,7 @@
 			isa = PBXGroup;
 			children = (
 				342DCD5A2FC30F491CDF2E80 /* SuperpoweredTest */,
+				342DCAE8CAA8DFCFB827ACB7 /* libSuperpoweredAudioOSX.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -59,6 +64,7 @@
 			children = (
 				342DC0CEEE99ED352DB09101 /* Products */,
 				342DC6A803A53F375E814F03 /* SuperpoweredTest */,
+				342DC1C100655689B434EBE7 /* .gitignore */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,6 +101,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 342DCEC16CD2F98C5DBC4567;
@@ -123,6 +130,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = "\"${PROJECT_DIR}/Superpowered\"/**";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Superpowered",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -131,6 +142,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = "\"${PROJECT_DIR}/Superpowered\"/**";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Superpowered",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -179,10 +194,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /Users/oren/projects/joytunes/SuperpoweredTest/Superpowered;
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
+				SYSTEM_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};
@@ -236,11 +253,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /Users/oren/projects/joytunes/SuperpoweredTest/Superpowered;
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				SYSTEM_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -263,6 +282,7 @@
 				342DC464C5C8B3F776F60803 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
